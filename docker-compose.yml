@@ -1,0 +1,16 @@
+version: '3'
+services:
+  client:
+    image: 'cygnetops/multi-client-10-14'
+    mem_limit: 128m
+  api:
+    image: 'cygnetops/multi-server-10-14'
+    mem_limit: 128m
+  worker:
+    image: 'multi-worker-10-14'
+    mem_limit: 128m
+  nginx:
+    image: 'cygnetops/multi-nginx-10-14'
+    mem_limit: 128m
+    ports:
+      - '80:80'
