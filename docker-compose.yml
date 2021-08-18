@@ -25,6 +25,3 @@ services:
     mem_limit: 128m
     ports:
       - '80:80'
-    links:
-      - client
-      - server
