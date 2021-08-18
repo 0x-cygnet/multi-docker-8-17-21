@@ -3,7 +3,7 @@ services:
   client:
     image: 'cygnetops/multi-client-10-14'
     mem_limit: 128m
-  server:
+  api:
     image: 'cygnetops/multi-server-10-14'
     mem_limit: 128m
     environment:
