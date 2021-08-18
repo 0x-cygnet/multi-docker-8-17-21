@@ -3,14 +3,18 @@ services:
   client:
     image: 'cygnetops/multi-client-10-14'
     mem_limit: 128m
-  api:
+    hostname: client
+  server:
     image: 'cygnetops/multi-server-10-14'
     mem_limit: 128m
+    hostname: api
   worker:
     image: 'cygnetops/multi-worker-10-14'
     mem_limit: 128m
+    hostname: worker
   nginx:
     image: 'cygnetops/multi-nginx-10-14'
     mem_limit: 128m
+    hostname: nginx
     ports:
       - '80:80'
